@@ -13,7 +13,7 @@ class User extends Authenticatable implements MustVerifyEmail
     use HasApiTokens, HasFactory, Notifiable;
 
     // 1人のユーザーは、複数の投稿ができる
-    public function post() {
+    public function posts() {
         return $this->hasMany(Post::class);
     }
 
